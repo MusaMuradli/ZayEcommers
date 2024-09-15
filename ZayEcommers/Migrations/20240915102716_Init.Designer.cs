@@ -11,7 +11,7 @@ using ZayEcommers.DAL;
 namespace ZayEcommers.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240915091747_Init")]
+    [Migration("20240915102716_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
