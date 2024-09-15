@@ -7,7 +7,31 @@ https://templatemo.com/tm-559-zay-shop
 */
 
 'use strict';
-$(document).ready(function() {
+$(document).ready(function () {
+
+    $(document).on('click', '#laodMore', function () {
+        $.ajax({
+            url: "/shop/loadProducts/",
+            type: "GET",
+            success: function (response) {
+                $("#productsRow").append(response)
+            },
+            error: function (xhr) {
+
+            }
+        });
+    })
+
+
+
+
+
+
+
+
+
+
+
 
     // Accordion
     var all_panels = $('.templatemo-accordion > li > ul').hide();

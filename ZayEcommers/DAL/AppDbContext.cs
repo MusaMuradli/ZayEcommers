@@ -12,6 +12,8 @@ namespace ZayEcommers.DAL
         public DbSet<Category> categories { get; set; }
         public DbSet<Product> products { get; set; }
         public DbSet<Slider> slider { get; set; }
+        public DbSet<OurServices> ourServices { get; set; }
+
 
     }
 }
