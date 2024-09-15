@@ -13,7 +13,7 @@ namespace ZayEcommers.DAL
         public DbSet<Product> products { get; set; }
         public DbSet<Slider> slider { get; set; }
         public DbSet<OurServices> ourServices { get; set; }
-
+        public DbSet<Footer> footer { get; set; }
 
     }
 }

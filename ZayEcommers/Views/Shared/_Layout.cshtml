@@ -52,8 +52,9 @@
 
     @RenderBody()
 
-    @*footer partial*@
-    <partial name="_FooterPartial"></partial>
+    @*@*footer partial*@
+    @*<partial name="_FooterPartial"></partial>*@*
+    @await Component.InvokeAsync("Footer");
 
     <!-- Start Script -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>
