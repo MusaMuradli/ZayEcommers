@@ -18,9 +18,14 @@ namespace ZayEcommers.Controllers
             var products = await _dbContext.products.Take(4).Include(p=>p.Category).ToListAsync();
             return View(products);
         }
-        public IActionResult loadProducts()
+        public IActionResult LoadProducts(int page = 1)
         {
-            var products =  _dbContext.products.Include(p=>p.Category).Take(4).ToList();
+            int pageSize = 4;
+            var products =  _dbContext.products.Include(p=>p.Category).Skip((page-1)*pageSize).Take(pageSize).ToList();
+            if (products.Count == 0)
+            {
+                return new EmptyResult();
+            }
             return PartialView("_ProductPartial",products);
         }
 

@@ -8,10 +8,10 @@ https://templatemo.com/tm-559-zay-shop
 
 'use strict';
 $(document).ready(function () {
-
+    let page = 1;
     $(document).on('click', '#laodMore', function () {
         $.ajax({
-            url: "/shop/loadProducts/",
+            url: "/shop/loadProducts?page=" + page,
             type: "GET",
             success: function (response) {
                 $("#productsRow").append(response)
